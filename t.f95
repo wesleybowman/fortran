@@ -38,19 +38,21 @@ subroutine matrix(n, m, a,b)
 
 end subroutine matrix
 
-subroutine tdmatrix(k, l, m, a, b)
+subroutine matrix3(k, l, m, a, b)
     !real, dimension(3,3) :: a
     integer k,l,m,x,y,z
     real a(k, l, m)
     real, intent(out) :: b(k, l, m)
+    print*, a
+    print*, size(a)
 
-    do x=1, 3
-        do y=1, 3
-            do z=1, 3
-                b(x,y,z)=a(x,y,z)*2
-                enddo
-        enddo
-    enddo
+!    do x=1, 3
+!        do y=1, 3
+!            do z=1, 3
+!                b(x,y,z)=a(x,y,z)*2
+!                enddo
+!        enddo
+!    enddo
 
     return
 end
